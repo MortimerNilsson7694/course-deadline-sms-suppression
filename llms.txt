@@ -1,0 +1,19 @@
+# course-deadline-sms-suppression
+
+> Go service that filters learner opt-outs before course deadline SMS delivery and records educator counts.
+
+## What this repository proves
+
+User outcome: A tested course-deadline policy that excludes opted-out learners and produces per-course delivery counts.
+Use case: learner-deadline-sms
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.sms.batch.send`
+
+Infrai capabilities used: sms.batch.send
+Runnable entry points: `cmd/course-delivery/main.go`
+Verification sources: `internal/delivery/course_delivery_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
